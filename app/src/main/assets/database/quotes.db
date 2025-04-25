@@ -1,0 +1,21 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE quotes (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    text TEXT NOT NULL,
+    author TEXT NOT NULL,
+    isFavorite INTEGER NOT NULL DEFAULT 0
+);
+
+INSERT INTO quotes (text, author) VALUES 
+('Be the change you wish to see in the world.', 'Mahatma Gandhi'),
+('The only way to do great work is to love what you do.', 'Steve Jobs'),
+('Success is not final, failure is not fatal: it is the courage to continue that counts.', 'Winston Churchill'),
+('In three words I can sum up everything I''ve learned about life: it goes on.', 'Robert Frost'),
+('The future belongs to those who believe in the beauty of their dreams.', 'Eleanor Roosevelt'),
+('Everything you''ve ever wanted is on the other side of fear.', 'George Addair'),
+('The only impossible journey is the one you never begin.', 'Tony Robbins'),
+('Life is what happens when you''re busy making other plans.', 'John Lennon'),
+('The best way to predict the future is to create it.', 'Peter Drucker'),
+('The journey of a thousand miles begins with one step.', 'Lao Tzu');
+COMMIT; 
